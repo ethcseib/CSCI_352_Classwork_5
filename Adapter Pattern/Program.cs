@@ -6,7 +6,7 @@ namespace Adapter_Pattern
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
