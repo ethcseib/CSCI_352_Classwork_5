@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*Ethan Seiber
+ * Date: 2/7/19
+ * Assignment: Classwork 5
+ * File: Adapter Pattern
+*/
+using System;
 
 namespace Adapter_Pattern
 {
@@ -15,19 +20,19 @@ namespace Adapter_Pattern
 
             MrTeddy.hug();
 
-            ANewBear.hug();
+            ANewBear.hug();//adapted Bear class
 
             Console.ReadKey();
         }
     }
 }
 
-interface ToyBear
+interface ToyBear//Target
 {
     void hug();
 }
 
-interface Bear
+interface Bear//Adaptee
 {
     void maul();
     void hibernate();
@@ -54,9 +59,10 @@ class TeddyBear : ToyBear
     }
 }
 
-class BearAdapter : ToyBear
+class BearAdapter : ToyBear//Adapter class
 {
     Bear BabyBear;
+
     public BearAdapter(Bear BigBear)
     {
         BabyBear = BigBear;
